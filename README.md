@@ -1,6 +1,6 @@
-# arpSpoofr
+# man in the mille tools
 
-python toolkit to spoof both targt and router to be man in the midle
+python toolkits to scan network and spoof both targt and router to be man in the midle
 
 # How To Use ?
 
