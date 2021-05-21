@@ -4,6 +4,8 @@ python toolkit to spoof both targt and router to be man in the midle
 
 # How To Use ?
 
+## arp spoofer
+
 ```
 python3 arpSpoof.py -t <your target> -s <your host to spoof> 
 ```
