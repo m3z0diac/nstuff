@@ -1,5 +1,7 @@
 # arpSpoofr
 
+python toolkit to spoof both targt and router to be man in the midle
+
 # How To Use ?
 
 ```
@@ -10,4 +12,4 @@ or
 ```
 python3 arpSpoof.py --target <your target> --src <your host to spoof> 
 ```
-python toolkit to spoof both targt and router to be man in the midle
+
